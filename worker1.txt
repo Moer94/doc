@@ -1,0 +1,71 @@
+Name:               worker1
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=worker1
+                    kubernetes.io/os=linux
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    projectcalico.org/IPv4Address: 192.168.99.102/24
+                    projectcalico.org/IPv4IPIPTunnelAddr: 192.168.235.128
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 10 Mar 2022 20:52:25 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  worker1
+  AcquireTime:     <unset>
+  RenewTime:       Mon, 06 Jun 2022 18:19:08 +0000
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Mon, 06 Jun 2022 17:13:23 +0000   Mon, 06 Jun 2022 17:13:23 +0000   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Mon, 06 Jun 2022 18:16:06 +0000   Tue, 22 Mar 2022 11:53:57 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Mon, 06 Jun 2022 18:16:06 +0000   Fri, 29 Apr 2022 17:36:53 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Mon, 06 Jun 2022 18:16:06 +0000   Tue, 22 Mar 2022 11:53:57 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Mon, 06 Jun 2022 18:16:06 +0000   Thu, 26 May 2022 03:13:28 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.99.102
+  Hostname:    worker1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  16241644Ki
+  hugepages-2Mi:      0
+  memory:             2018208Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  14968299086
+  hugepages-2Mi:      0
+  memory:             1915808Ki
+  pods:               110
+System Info:
+  Machine ID:                 b98b4e872a13451b91e789e26c9d7c09
+  System UUID:                793ace84-4673-b04a-b77f-82ef31243dec
+  Boot ID:                    3cb63fad-d65c-4403-be49-61c914f057f2
+  Kernel Version:             5.17.5-300.fc36.x86_64
+  OS Image:                   Fedora CoreOS 36.20220505.3.2
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://20.10.12
+  Kubelet Version:            v1.23.4
+  Kube-Proxy Version:         v1.23.4
+PodCIDR:                      192.168.1.0/24
+PodCIDRs:                     192.168.1.0/24
+Non-terminated Pods:          (4 in total)
+  Namespace                   Name                             CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                             ------------  ----------  ---------------  -------------  ---
+  default                     mpi-operator-launcher-fktmw      0 (0%)        0 (0%)      0 (0%)           0 (0%)         44m
+  kube-system                 calico-node-5c5tt                250m (12%)    0 (0%)      0 (0%)           0 (0%)         71d
+  kube-system                 kube-proxy-znpsd                 0 (0%)        0 (0%)      0 (0%)           0 (0%)         87d
+  mpi-operator                mpi-operator-66d6f57549-czq5x    0 (0%)        0 (0%)      0 (0%)           0 (0%)         37d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                250m (12%)  0 (0%)
+  memory             0 (0%)      0 (0%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:              <none>
